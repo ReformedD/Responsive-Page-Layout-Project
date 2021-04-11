@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+
+/* 
+
+Front End Web Development Project 2: Responsive Layout
+
+Author: Daymon Ghieuw
+Date: 2021/03/26
+
+Filename: styles.css
+
+*/    
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0, auto;
+    width: 90%;
+}
+
+h1, h2, h3, p, li, .introtext {
+    font-family: 'Comfortaa', cursive  ;
+}
+
+.name {
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.menuitem, .porttitle{
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.imagetitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: silver;
+    text-align: center;
+    color: black;
+}
+
+header .container {
+    padding-top: 20px;
+}
+
+header h1 {
+    padding-bottom: 20px;
+}
+
+.menu ul, .contact-list {
+    list-style-type: none;
+}
+
+.menu li {
+    background-color:silver;
+    border-radius: 4px;
+}
+
+.menu li + li {
+    margin: 5px, 0;
+}
+
+.menu li:last-child {
+    margin: 0;
+}
+
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color:black;
+    padding: 10px, 0;
+}
+
+
+.profile-pic {
+    width: 70%;
+    padding-top: 20px;
+}
+
+
+header p {
+    font-size: 1.12rem;
+    padding: 20px, 0, 40px;
+    color: silver;
+}
+
+.portfolio, .porttitle {
+    background-color: #fff;
+    text-align: center;
+    color: black;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.portfolio .container, .contact .container {
+    padding-bottom: 30px;
+}
+
+.portfolio h2, .contact h2 {
+    padding-bottom: 40px;
+}
+
+.portfolio h3 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.contact {
+    background-color: silver;
+    text-align: center;
+    color: black;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.contact p, .contact li {
+    font-size: 1.12rem;
+    color: black;
+}
+
+.contact p {
+    padding-bottom: 40px;
+}
+
+.contact li {
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.contact li:first-child {
+    margin-bottom: 20px;
+}
+
+.contact a {
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+footer {
+    background-color:silver;
+    text-align: center;
+    color: black;
+}
+
+
+footer .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px, solid silver;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footeritem {
+    color: black;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+
+.footerlist:first-of-type {
+    float:left;
+}
+
+.footerlist:last-of-type {
+    float: right;
+    text-transform: uppercase;
+}
+
+footer .container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer-menu {
+    display: none;
+}
+
+/* Media queries*/
+
+@media (min-width: 768px) {
+    header .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    header .container:last-child {
+        padding-top: 0;
+    }
+
+    .menu li {
+        display: inline-block;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .menu li + li {
+        margin: 0, 0, 0, 40px;
+    }
+
+    .menu li:last-child {
+        margin: 0, 0, 0, 40px;
+    }
+
+    .menu a {
+        padding: 10px;
+    }
+
+    .menu a:hover, .footermenu a:hover {
+        color: lightgray
+    }
+
+    .profile-pic {
+        width: 45%;
+        float: right;
+        padding-top: 0;
+    }
+
+    header p {
+        width: 55%;
+        float: left;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 5%;
+        text-align: left;
+    }
+
+    header .container::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .portfolio, .contact {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .portfolio .container {
+        width: 43.75%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .portfolio .container:nth-last-of-type(1), .portfolio .container:nth-last-of-type(2){
+        padding-bottom: 0;
+    }
+
+    .portfolio .container:nth-last-of-type(odd) {
+        margin-right: 2.5%;
+    }
+
+    .contact .container {
+        padding-bottom: 0;
+    }
+
+    .contact p {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer .footertop {
+        display: none;
+    }
+
+    .footermenu {
+        display: block;
+        float: right;
+        list-style-type: none;
+    }
+
+    .footermenu li {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    .footermenu li:first-of-type {
+        margin-left: 0;
+    }
+
+    .footermenu .footeritem:first-of-type, .footermenu .footeritem:last-of-type {
+        float: none;
+    }
+
+}
+
+/* Desktop media query*/
+
+@media (min-wdith: 1024px) {
+
+    header .container {
+        position: relative;
+    }
+
+    header h1 {
+        float: left;
+        padding-bottom: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50);
+    }
+
+    .menu {
+        float: right;
+    }
+
+    main {
+        background-color: silver;
+    }
+
+    .portfolio {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color:#fff;
+        padding-bottom: 0;
+    }
+
+    .portfolio .container {
+        width: 30%;
+        padding-bottom: 60px;
+        margin-right: 2.5%;
+    }
+
+    .portfolio .container:nth-last-of-type(1), .portfolio .container:nth-last-of-type(2) {
+        padding-bottom: 60px;
+    }
+
+    .portfolio .container:nth-of-type(3) {
+        margin-right: 0;
+    }
+
+    .contact p {
+        width: 50%;
+    }
+}
+
+
+
+
+
